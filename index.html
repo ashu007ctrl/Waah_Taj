@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taj Mahal - Symbol of Eternal Love</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+    <div class="loader-dome"></div>
+    <div class="loader-text">TAJ MAHAL</div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+</div>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+    <button class="mobile-close" id="mobileClose"><i class="fas fa-times"></i></button>
+    <a href="#hero" onclick="closeMobileNav()">Home</a>
+    <a href="#about" onclick="closeMobileNav()">About</a>
+    <a href="#gallery" onclick="closeMobileNav()">Gallery</a>
+    <a href="#visit" onclick="closeMobileNav()">Visit</a>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+    <a href="#hero" class="nav-logo">
+        <div class="nav-logo-icon">🕌</div>
+        Taj Mahal
+    </a>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#visit" class="nav-cta">Plan Visit</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="openMobileNav()">
+        <span></span><span></span><span></span>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section id="hero">
+    <div class="stars-bg" id="starsContainer"></div>
+    <div class="moon"></div>
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <div class="hero-badge">
+            <i class="fas fa-star"></i>
+            UNESCO World Heritage Site · Est. 1632
+        </div>
+        <h1 class="hero-title">Taj Mahal</h1>
+        <p class="hero-subtitle-italic">"A teardrop on the face of eternity"</p>
+        <p class="hero-desc">
+            An eternal monument of love, the Taj Mahal stands as a testament to Emperor Shah Jahan's 
+            devotion. A masterpiece of Mughal architecture that transcends time.
+        </p>
+        <div class="hero-btns">
+            <a href="#visit" class="btn-outline">
+                <i class="fas fa-map-marker-alt" style="margin-right:8px"></i>Plan Your Visit
+            </a>
+        </div>
+    </div>
+    <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        <span class="scroll-text">Scroll</span>
+    </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+    <div class="stat-item reveal">
+        <div class="stat-number" data-count="1632">0</div>
+        <div class="stat-label">Year Built</div>
+    </div>
+    <div class="stat-item reveal" style="transition-delay:0.1s">
+        <div class="stat-number" data-count="22000">0</div>
+        <div class="stat-label">Artisans Employed</div>
+    </div>
+    <div class="stat-item reveal" style="transition-delay:0.2s">
+        <div class="stat-number" data-count="8">0</div>
+        <div class="stat-label">Million Visitors/Year</div>
+    </div>
+    <div class="stat-item reveal" style="transition-delay:0.3s">
+        <div class="stat-number" data-count="73">0</div>
+        <div class="stat-label">Meters Height</div>
+    </div>
+</div>
+
+<!-- ABOUT SECTION -->
+<section id="about">
+    <div class="about-grid">
+        <div class="about-visual reveal-left">
+            <div class="about-img-main">
+                <div class="about-img-overlay"></div>
+            </div>
+            <div class="about-img-badge">
+                <span class="badge-year">1632</span>
+                <span class="badge-label">Built</span>
+            </div>
+        </div>
+
+        <div class="about-content reveal-right">
+            <span class="section-tag">About</span>
+            <h2 class="section-title">A Monument of <span>Eternal Love</span></h2>
+            <div class="divider"></div>
+            <p class="about-text">
+                The Taj Mahal, located in Agra, India, is an ivory-white marble mausoleum 
+                commissioned in 1632 by Emperor Shah Jahan to house the tomb of his beloved wife 
+                Mumtaz Mahal. A UNESCO World Heritage Site since 1983.
+            </p>
+            <div class="about-features">
+                <div class="about-feature">
+                    <div class="feature-icon"><i class="fas fa-gem"></i></div>
+                    <div class="feature-text">
+                        <h4>Pure White Marble</h4>
+                        <p>Sourced from Makrana, Rajasthan</p>
+                    </div>
+                </div>
+                <div class="about-feature">
+                    <div class="feature-icon"><i class="fas fa-globe-asia"></i></div>
+                    <div class="feature-text">
+                        <h4>UNESCO Heritage</h4>
+                        <p>Listed as World Heritage in 1983</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY SECTION -->
+<section id="gallery">
+    <div class="gallery-header reveal">
+        <span class="section-tag">Visual Journey</span>
+        <h2 class="section-title">Through the <span>Lens</span></h2>
+        <div class="divider center"></div>
+    </div>
+
+    <div class="gallery-tabs reveal">
+        <button class="gallery-tab active" onclick="filterGallery('all', this)">All</button>
+        <button class="gallery-tab" onclick="filterGallery('exterior', this)">Exterior</button>
+        <button class="gallery-tab" onclick="filterGallery('interior', this)">Interior</button>
+    </div>
+
+    <div class="gallery-grid">
+        <!-- Gallery Items -->
+        <div class="gallery-item" data-category="exterior">
+            <div class="gallery-inner">
+                <div class="gallery-scene scene-dawn"></div>
+                <div class="gallery-overlay">
+                    <h4>Golden Dawn</h4>
+                    <p>Sunrise at the Taj Mahal, Agra</p>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item" data-category="exterior">
+            <div class="gallery-inner">
+                <div class="gallery-scene scene-night"></div>
+                <div class="gallery-overlay">
+                    <h4>Moonlit Marble</h4>
+                    <p>Full moon night illumination</p>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item" data-category="interior">
+            <div class="gallery-inner">
+                <div class="gallery-scene scene-interior"></div>
+                <div class="gallery-overlay">
+                    <h4>Sacred Interior</h4>
+                    <p>Intricate inlay and calligraphy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- VISIT SECTION -->
+<section id="visit">
+    <div class="visit-header reveal">
+        <span class="section-tag">Plan Your Visit</span>
+        <h2 class="section-title">Visitor <span>Information</span></h2>
+        <div class="divider center"></div>
+    </div>
+    
+    <div class="visit-grid">
+        <div class="visit-card reveal">
+            <div class="visit-icon"><i class="far fa-clock"></i></div>
+            <h3>Timings</h3>
+            <ul class="visit-list">
+                <li><span class="day">Mon - Thu</span> <span class="time">Sunrise to Sunset</span></li>
+                <li><span class="day">Friday</span> <span class="time closed">Closed</span></li>
+                <li><span class="day">Sat - Sun</span> <span class="time">Sunrise to Sunset</span></li>
+            </ul>
+        </div>
+        <div class="visit-card reveal" style="transition-delay: 0.1s;">
+            <div class="visit-icon"><i class="fas fa-ticket-alt"></i></div>
+            <h3>Tickets</h3>
+            <ul class="visit-list">
+                <li><span class="day">Indian Citizens</span> <span class="price">₹50</span></li>
+                <li><span class="day">SAARC/BIMSTEC</span> <span class="price">₹540</span></li>
+                <li><span class="day">Foreigners</span> <span class="price">₹1100</span></li>
+            </ul>
+        </div>
+        <div class="visit-card reveal" style="transition-delay: 0.2s;">
+            <div class="visit-icon"><i class="fas fa-camera"></i></div>
+            <h3>Guidelines</h3>
+            <ul class="visit-list">
+                <li><span class="day">Photography</span> <span class="time">Allowed (Exterior)</span></li>
+                <li><span class="day">Food/Drink</span> <span class="time closed">Prohibited</span></li>
+                <li><span class="day">Tripods</span> <span class="time closed">Not Allowed</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <a href="#hero" class="nav-logo"><div class="nav-logo-icon">🕌</div> Taj Mahal</a>
+            <p>An eternal monument of love and a masterpiece of Mughal architecture.</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <ul class="footer-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#visit">Visit</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
